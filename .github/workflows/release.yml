@@ -37,7 +37,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       with:
-        tag_name: newtag
+        # tag_name: newtag
         release_name: Automatic Release
         draft: false
         prerelease: false
