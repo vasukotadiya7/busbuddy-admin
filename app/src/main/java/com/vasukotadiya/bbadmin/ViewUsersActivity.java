@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.vasukotadiya.bbadmin.Adapters.UserTableAdapter;
 import com.vasukotadiya.bbadmin.Model.UserModel;
-import com.ajinkya.easygo_admin.R;
+import com.vasukotadiya.bbadmin.R;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

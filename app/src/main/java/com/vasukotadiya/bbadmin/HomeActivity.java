@@ -8,7 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
-import com.ajinkya.easygo_admin.R;
+import com.vasukotadiya.bbadmin.R;
+
 
 public class HomeActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.ajinkya.easygo_admin;
+package com.vasukotadiya.bbadmin;
 
 import org.junit.Test;
 

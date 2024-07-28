@@ -22,7 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.vasukotadiya.bbadmin.Adapters.BusViewTableAdapter;
 import com.vasukotadiya.bbadmin.Model.BusModel;
-import com.ajinkya.easygo_admin.R;
+import com.vasukotadiya.bbadmin.R;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

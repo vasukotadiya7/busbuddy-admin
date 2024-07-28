@@ -15,6 +15,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    namespace "com.vasukotadiya.bbadmin"
 
     buildTypes {
         release {
@@ -26,7 +27,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
-    namespace 'com.ajinkya.easygo_admin'
 }
 
 dependencies {

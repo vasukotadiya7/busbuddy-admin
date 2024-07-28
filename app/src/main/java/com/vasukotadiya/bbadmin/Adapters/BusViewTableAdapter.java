@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.vasukotadiya.bbadmin.Model.BusModel;
-import com.ajinkya.easygo_admin.R;
+import com.vasukotadiya.bbadmin.R;
 
 
 import java.util.ArrayList;
