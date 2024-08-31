@@ -140,21 +140,21 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="100dp"
+                            android:layout_width="150dp"
                             android:background="@color/white"
                             android:gravity="center"
                             android:paddingHorizontal="10dp"
-                            android:text="Start Time"
+                            android:text="Boarding Time"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
 
 
                         <TextView
-                            android:layout_width="100dp"
+                            android:layout_width="150dp"
                             android:background="@color/white"
                             android:gravity="center"
                             android:paddingHorizontal="10dp"
-                            android:text="End Time"
+                            android:text="Departure Time"
                             android:textColor="@color/black"
                             android:textStyle="bold" />
 

@@ -112,31 +112,33 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="10dp"
                     android:weightSum="2">
+
                     <EditText
                         android:id="@+id/StartTimeAB"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Start Time"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/purple_500"
+                        android:clickable="true"
                         android:drawableStart="@drawable/ic_time"
                         android:drawablePadding="10dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:layout_marginEnd="8dp"
-                        android:backgroundTint="@color/purple_500"
+                        android:editable="false"
                         android:focusable="false"
-                        android:editable="false"/>
+                        android:hint="Boarding   Time" />
+
                     <EditText
                         android:id="@+id/EndTimeAB"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
                         android:layout_weight="1"
+                        android:backgroundTint="@color/purple_500"
                         android:drawableStart="@drawable/ic_time"
                         android:drawablePadding="10dp"
-                        android:layout_marginStart="8dp"
-                        android:hint="End Time"
-                        android:backgroundTint="@color/purple_500"
-                        android:focusable="false"
                         android:editable="false"
+                        android:focusable="false"
+                        android:hint="Departure Time"
                         android:importantForAutofill="no" />
                 </LinearLayout>
 

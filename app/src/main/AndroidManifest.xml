@@ -13,19 +13,33 @@
         android:theme="@style/Theme.EasyGoAdmin"
         tools:targetApi="31">
         <activity
-            android:name="com.vasukotadiya.bbadmin.ViewUsersActivity"
+            android:name=".PassengerScreen2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PassengerScreen1"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewUsersActivity"
             android:exported="false" />
         <activity
-            android:name="com.vasukotadiya.bbadmin.ViewBusActivity"
+            android:name=".ViewBusActivity"
             android:exported="false" />
         <activity
-            android:name="com.vasukotadiya.bbadmin.AddBuses"
+            android:name=".AddBuses"
             android:exported="false" />
         <activity
-            android:name="com.vasukotadiya.bbadmin.AddLocations"
+            android:name=".AddLocations"
             android:exported="false" />
         <activity
-            android:name="com.vasukotadiya.bbadmin.HomeActivity"
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

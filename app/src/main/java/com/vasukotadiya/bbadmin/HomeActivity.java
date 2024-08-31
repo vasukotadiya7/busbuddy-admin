@@ -46,7 +46,13 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-
+        viewPassengers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, PassengerScreen1.class);
+                startActivity(intent);
+            }
+        });
         viewUsers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
