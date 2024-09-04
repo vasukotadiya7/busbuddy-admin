@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
+
     tools:context=".PassengerScreen1">
 
 
@@ -94,7 +96,7 @@
         android:layout_alignParentTop="true"
         android:background="@null"
         app:navigationIcon="@drawable/ic_back"
-        app:title="EasyGo-Admin"
+        app:title="BB-Admin"
         app:titleTextColor="@color/white" />
 
 

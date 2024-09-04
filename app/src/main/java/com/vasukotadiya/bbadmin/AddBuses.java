@@ -6,12 +6,14 @@ import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.HttpAuthHandler;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -37,11 +39,12 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.Objects;
 
 public class AddBuses extends AppCompatActivity implements IFirebaseLoadDone {
     private Spinner BusType,ToLocation, FromLocation;
-    private EditText BusNumber,StartTime,EndTime,SeatAvailable,Price,Date;
+    private EditText BusNumber,StartTime,EndTime,Price,SeatAvailable,Date;
     private Button AddBus;
 
     private String fromLocation,toLocation,startTime,endTime,date,busType;
@@ -87,6 +90,7 @@ public class AddBuses extends AppCompatActivity implements IFirebaseLoadDone {
         AddBus = findViewById(R.id.AddBusAB);
         FromLocation = findViewById(R.id.StartLocationAB);
 
+        SeatAvailable.setEnabled(false);
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Loading data...");
@@ -214,6 +218,9 @@ public class AddBuses extends AppCompatActivity implements IFirebaseLoadDone {
                 child("Buses").child(date).child(route).child(dbBusNumber);
         String Ticket_price = Price.getText().toString();
         HashMap<String, String> loci = new HashMap<>();
+        HashMap<String,Integer> bookedSeats=new HashMap<>();
+        bookedSeats.put("0",0);
+        bookedSeats.put(String.valueOf(Integer.parseInt(busNo)+1),41);
         loci.put("FromLocation",fromLocation);
         loci.put("ToLocation",toLocation);
         loci.put("StartTime",StartTime);
@@ -223,10 +230,12 @@ public class AddBuses extends AppCompatActivity implements IFirebaseLoadDone {
         loci.put("BusNo",dbBusNumber);
         loci.put("NumberOfSeat",busNo);
         loci.put("TicketPrice",Ticket_price);
+//        loci.put("Booked","0");
         storingData.setValue(loci).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
+                    storingData.child("Booked").setValue(bookedSeats);
                     sendingData.dismiss();
                     Toast.makeText(AddBuses.this,"Bus Added Successfully..." ,Toast.LENGTH_SHORT).show();
                 }else {
@@ -246,6 +255,11 @@ public class AddBuses extends AppCompatActivity implements IFirebaseLoadDone {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 busType =adapterView.getItemAtPosition(i).toString();
+                if(busType.contains("Sleeper")){
+                    SeatAvailable.setText("30");
+                }else{
+                    SeatAvailable.setText("40");
+                }
             }
 
             @Override
