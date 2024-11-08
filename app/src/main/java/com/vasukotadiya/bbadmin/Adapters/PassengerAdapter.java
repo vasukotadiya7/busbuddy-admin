@@ -35,8 +35,8 @@ public class PassengerAdapter extends RecyclerView.Adapter<PassengerAdapter.View
         holder.name.setText(userModel.getName());
         holder.phoneNo.setText(userModel.getPhoneNo());
         holder.seatNo.setText(userModel.getSeat());
-
-
+        holder.refund.setText(userModel.getRefund());
+        holder.transactionID.setText(userModel.getTransactionID());
     }
 
     @Override
@@ -45,12 +45,14 @@ public class PassengerAdapter extends RecyclerView.Adapter<PassengerAdapter.View
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView name,phoneNo, seatNo;
+        TextView name,phoneNo, seatNo,refund,transactionID;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             this.name = itemView.findViewById(R.id.NameRPS2);
             this.phoneNo = itemView.findViewById(R.id.PhoneNoRPS2);
             this.seatNo = itemView.findViewById(R.id.SeatNoRPS2);
+            this.refund=itemView.findViewById(R.id.RefundAmount);
+            this.transactionID=itemView.findViewById(R.id.TransactionID);
         }
     }
 }

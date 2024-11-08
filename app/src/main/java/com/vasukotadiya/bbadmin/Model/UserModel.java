@@ -5,6 +5,24 @@ public class UserModel {
     public String PhoneNo;
     public String Email;
     public String Seat;
+    public String Refund;
+    public String TransactionID;
+
+    public String getTransactionID() {
+        return TransactionID;
+    }
+
+    public void setTransactionID(String transactionID) {
+        TransactionID = transactionID;
+    }
+
+    public String getRefund() {
+        return Refund;
+    }
+
+    public void setRefund(String refund) {
+        Refund = refund;
+    }
 
     public String getName() {
         return Name;

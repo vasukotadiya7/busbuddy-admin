@@ -58,6 +58,8 @@ public class PassengerScreen2 extends AppCompatActivity {
                 userModel.setName(snapshot.child("PassengerName").getValue().toString());
                 userModel.setPhoneNo(snapshot.child("PassengerPhone").getValue().toString());
                 userModel.setSeat(snapshot.child("PassengerSeatNo").getValue().toString());
+                userModel.setRefund(snapshot.child("RefundAmount").getValue().toString());
+                userModel.setTransactionID(snapshot.child("TransactionID").getValue().toString());
                 userModelArrayList.add(userModel);
                 adapter.notifyDataSetChanged();
             }
